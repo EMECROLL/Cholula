@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import logo from '@/assets/Pueblos-Magicos-logo.png'
+
 </script>
 
 <style lang="css">
@@ -27,13 +29,12 @@
 
 <template>
   <footer role="contentinfo" class="bg-black text-gray-200">
-    <div class="iconslinefooter"></div>
-
     <div class="relative overflow-hidden">
-      <div class="relative max-w-7xl mx-auto px-6 py-12 grid gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <div class="flex flex-col items-start space-y-6">
+      <div class="iconslinefooter"></div>
+      <div class="flex flex-col justify-center items-center max-w-7xl mx-auto px-6 py-12  gap-12">
+        <div class="flex flex-col items-center space-y-6">
           <img
-            src="https://pueblosmag2023.wpengine.com/wp-content/uploads/2023/09/pm_md-1.svg"
+            :src="logo"
             alt="Logo"
             width="360"
             height="61"
@@ -46,43 +47,39 @@
               target="_blank"
               aria-label="Enlace al Facebook Oficial del sitio"
               class="socialbox fb hover:text-blue-600 transition-colors"
-              ><i class="fa-brands fa-facebook-f"></i
-            ></a>
+              ><i class="pi pi-facebook"></i></a>
             <a
               href="https://twitter.com/mexdesconocido"
               target="_blank"
               aria-label="Enlace al Twitter Oficial del sitio"
               class="socialbox tw hover:text-blue-400 transition-colors"
-              ><i class="fa-brands fa-twitter"></i
+              ><i class="pi pi-twitter"></i
             ></a>
             <a
               href="https://www.instagram.com/mexicodesconocido/"
               target="_blank"
               aria-label="Enlace al Instagram Oficial del sitio"
               class="socialbox in hover:text-pink-500 transition-colors"
-              ><i class="fa-brands fa-instagram"></i
+              ><i class="pi pi-instagram"></i
             ></a>
             <a
               href="https://www.youtube.com/user/MEXICODESCONOCIDOTV"
               target="_blank"
               aria-label="Enlace al Youtube Oficial del sitio"
               class="socialbox yt hover:text-red-600 transition-colors"
-              ><i class="fa-brands fa-youtube"></i
+              ><i class="pi pi-youtube"></i
             ></a>
             <a
               href="https://www.tiktok.com/@mexicodesconocido"
               target="_blank"
               aria-label="Enlace al Tiktok Oficial del sitio"
               class="socialbox tk hover:text-black transition-colors"
-              ><i class="fa-brands fa-tiktok"></i
+              ><i class="pi pi-tiktok"></i
             ></a>
           </div>
         </div>
 
         <div class="w-full flex justify-between">
-          <div class="flex justify-center items-center">
-          </div>
-
           <div>
             <h2 class="text-xl font-semibold mb-3">Información</h2>
             <p>

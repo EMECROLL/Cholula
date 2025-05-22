@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import logo from '@/assets/Pueblos-Magicos-logo.png'
+
 </script>
 
 <template>
   <header class="bg-black text-white flex items-center justify-between px-8 py-4">
     <div class="flex items-center space-x-4">
-      <img src="" alt="Pueblos Mágicos" class="w-10 h-10" />
-      <span class="text-xl font-bold leading-tight tracking-wide">PUEBLOS<br />MÁGICOS</span>
+      <img :src="logo" alt="Pueblos Mágicos" class="h-10" />
     </div>
 
     <nav class="flex items-center space-x-8">
@@ -17,7 +18,7 @@ import { RouterLink } from 'vue-router'
       <RouterLink to="/tours" class="hover:text-gray-300">Tours</RouterLink>
 
       <button aria-label="Buscar" class="hover:text-gray-300">
-        LUPA
+        <i class="pi pi-search"></i>
       </button>
     </nav>
   </header>

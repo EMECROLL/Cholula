@@ -1,9 +1,13 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import HeroComponent from '@/components/HeroComponent.vue';
+import AboutCholulaComponent from '@/components/AboutCholulaComponent.vue';
+import ScrollingMockups from '@/components/ScrollingMockups.vue'
+import ClimateComponent from '@/components/ClimateComponent.vue';
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <HeroComponent />
+  <ClimateComponent/>
+  <ScrollingMockups></ScrollingMockups>
+  <AboutCholulaComponent />
 </template>
