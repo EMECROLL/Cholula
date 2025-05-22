@@ -2,10 +2,12 @@
 import HeroComponent from '@/components/HeroComponent.vue';
 import AboutCholulaComponent from '@/components/AboutCholulaComponent.vue';
 import ScrollingMockups from '@/components/ScrollingMockups.vue'
+import ClimateComponent from '@/components/ClimateComponent.vue';
 </script>
 
 <template>
   <HeroComponent />
+  <ClimateComponent/>
   <ScrollingMockups></ScrollingMockups>
   <AboutCholulaComponent />
 </template>
