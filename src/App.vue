@@ -2,13 +2,14 @@
 import { RouterView } from 'vue-router'
 import HeaderComponent from './components/HeaderComponent.vue'
 import FooterComponent from './components/FooterComponent.vue'
+import ScrollingMockups from './components/ScrollingMockups.vue'
 import 'primeicons/primeicons.css'
 
 </script>
 
 <template>
   <HeaderComponent></HeaderComponent>
-
+  <ScrollingMockups></ScrollingMockups>
   <RouterView/>
   <FooterComponent></FooterComponent>
 </template>
