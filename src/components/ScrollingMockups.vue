@@ -11,7 +11,7 @@
 
 <style scoped>
 .image-scroll-wrapper {
-  padding: 40px 20px;
+  margin-top: 20px;
   box-sizing: border-box;
   overflow-x: hidden;
 }
