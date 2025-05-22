@@ -17,7 +17,7 @@ import { RouterLink } from 'vue-router'
       <RouterLink to="/tours" class="hover:text-gray-300">Tours</RouterLink>
 
       <button aria-label="Buscar" class="hover:text-gray-300">
-        LUPA
+        <i class="pi pi-search"></i>
       </button>
     </nav>
   </header>
