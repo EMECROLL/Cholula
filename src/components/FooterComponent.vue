@@ -31,69 +31,69 @@ import logo from '@/assets/Pueblos-Magicos-logo.png'
   <footer role="contentinfo" class="bg-black text-gray-200">
     <div class="relative overflow-hidden">
       <div class="iconslinefooter"></div>
-      <div class="flex flex-col justify-center items-center max-w-7xl mx-auto px-6 py-12  gap-12">
-        <div class="flex flex-col items-center space-y-6">
+      <div class="flex flex-col justify-center items-center max-w-7xl mx-auto px-6 py-12 gap-12">
+        <div class="flex flex-col items-center space-y-6 my-10 gap-8">
           <img
             :src="logo"
             alt="Logo"
-            width="360"
-            height="61"
+            width="250"
             class="max-w-full h-auto"
           />
 
-          <div class="flex space-x-4 text-2xl">
+          <div class="flex space-x-4 text-2xl gap-8">
             <a
               href="https://www.facebook.com/mexicodesconocido"
               target="_blank"
               aria-label="Enlace al Facebook Oficial del sitio"
               class="socialbox fb hover:text-blue-600 transition-colors"
-              ><i class="pi pi-facebook"></i></a>
+              ><i class="pi pi-facebook text-3xl"></i></a>
             <a
               href="https://twitter.com/mexdesconocido"
               target="_blank"
               aria-label="Enlace al Twitter Oficial del sitio"
               class="socialbox tw hover:text-blue-400 transition-colors"
-              ><i class="pi pi-twitter"></i
+              ><i class="pi pi-twitter text-3xl"></i
             ></a>
             <a
               href="https://www.instagram.com/mexicodesconocido/"
               target="_blank"
               aria-label="Enlace al Instagram Oficial del sitio"
               class="socialbox in hover:text-pink-500 transition-colors"
-              ><i class="pi pi-instagram"></i
+              ><i class="pi pi-instagram text-3xl"></i
             ></a>
             <a
               href="https://www.youtube.com/user/MEXICODESCONOCIDOTV"
               target="_blank"
               aria-label="Enlace al Youtube Oficial del sitio"
               class="socialbox yt hover:text-red-600 transition-colors"
-              ><i class="pi pi-youtube"></i
+              ><i class="pi pi-youtube text-3xl"></i
             ></a>
             <a
               href="https://www.tiktok.com/@mexicodesconocido"
               target="_blank"
               aria-label="Enlace al Tiktok Oficial del sitio"
               class="socialbox tk hover:text-black transition-colors"
-              ><i class="pi pi-tiktok"></i
+              ><i class="pi pi-tiktok text-3xl"></i
             ></a>
           </div>
         </div>
 
-        <div class="w-full flex justify-between">
+        <div class="w-full flex justify-around">
           <div>
-            <h2 class="text-xl font-semibold mb-3">Información</h2>
+            <h2 class="text-2xl font-semibold mb-3 text-center">Información</h2>
             <p>
-              <a href="https://negocios.escapadas.mx/login?tab=signup/" class="hover:underline"
+              <a href="https://negocios.escapadas.mx/login?tab=signup/" class="hover:underline text-center text-lg"
                 >Registro de Proveedores</a
               >
             </p>
           </div>
 
           <div>
-            <h2 class="text-xl font-semibold mb-3">Información</h2>
-            <p>
-              <a href="https://www.gob.mx/sectur" class="hover:underline">Secretaría de Turismo</a><br />
-              <a href="https://www.mexicodesconocido.com.mx/" class="hover:underline">México Desconocido</a>
+            <h2 class="text-2xl font-semibold mb-3 text-center">Información</h2>
+            <p class="flex flex-col justify-center">
+              <a href="https://www.gob.mx/sectur" class="hover:underline text-center w-full text-lg">Secretaría de Turismo</a>
+              <br />
+              <a href="https://www.mexicodesconocido.com.mx/" class="hover:underline text-center text-lg">México Desconocido</a>
             </p>
           </div>
         </div>
