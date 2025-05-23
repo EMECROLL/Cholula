@@ -1,9 +1,12 @@
 <template>
-    <section class="hero p-30 space-y-8">
-        <h1 class="text-white text-7xl font-extrabold mb-5">Cholula</h1>
-        <h2 class="text-white text-5xl font-bold">Puebla</h2>
+    <section class="hero p-5 lg:p-30 space-y-8 flex flex-col justify-center lg:items-start lg:text-start items-center text-center">
+        <h1 class="text-white text-5xl lg:text-7xl font-extrabold mb-5">Cholula</h1>
+        <h2 class="text-white text-3xl lg:text-5xl font-bold">Puebla</h2>
         <hr class="w-[60%] text-white border-[1.5px]">
-        <p class="text-white text-xl tracking-wide">Como queriendo alcanzar a ese gigante nevado, <br>se eleva el Santuario de Nuestra Señora de los Remedios, <br>la
+        <p class="text-white text-xl tracking-wide block lg:hidden">Como queriendo alcanzar a ese gigante nevado, se eleva el Santuario de Nuestra Señora de los Remedios, la
+            iglesia de cúpulas cubiertas de azulejos que los españoles edificaron en el siglo XVI, encima de la Gran
+            Pirámide.</p>
+        <p class="text-white text-xl tracking-wide hidden lg:block">Como queriendo alcanzar a ese gigante nevado, <br>se eleva el Santuario de Nuestra Señora de los Remedios, <br>la
             iglesia de cúpulas cubiertas de azulejos que los españoles <br>edificaron en el siglo XVI, encima de la Gran
             Pirámide.</p>
         <button class="btn">Vive su magia</button>
@@ -19,11 +22,6 @@
     background-size: cover;
     width: 100%;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    text-align: start;
 }
 
 .btn{
