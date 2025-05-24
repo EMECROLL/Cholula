@@ -9,7 +9,7 @@ const isMenuOpen = ref(false)
 <template>
   <header class="bg-black text-white flex flex-wrap items-center justify-between md:justify-around p-4">
     <div class="flex items-center space-x-4">
-      <img :src="logo" alt="Pueblos Mágicos" class="h-12 md:h-[60px]" />
+      <img :src="logo" alt="Pueblos Mágicos" class="h-12 md:h-10 lg:h-[60px]" />
     </div>
 
     <div class="flex gap-4">
@@ -25,7 +25,7 @@ const isMenuOpen = ref(false)
     </div>
 
 
-    <nav class="hidden md:flex items-center space-x-[60px] p-8">
+    <nav class="hidden md:flex items-center md:space-x-[20px] lg:space-x-[60px] md:px-4 md:py-8 xl:p-8">
       <RouterLink to="/" class="hover:text-gray-300 text-lg">Atractivos</RouterLink>
       <RouterLink to="/" class="hover:text-gray-300 text-lg">Festividades</RouterLink>
       <RouterLink to="/" class="hover:text-gray-300 text-lg">Hoteles</RouterLink>
