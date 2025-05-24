@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import imgAtractivos from '@/assets/images/imgAtractivos.png'
+import imgFestividades from '@/assets/images/imgFestividades.png'
+import imgHoteles from '@/assets/images/imgHoteles.png'
+import imgRestaurantes from '@/assets/images/imgRestaurantes.png'
+import imgTours from '@/assets/images/imgTours.png'
+
 // Props opcionales para personalizar el componente
 interface Props {
   temperature?: number
@@ -15,28 +21,33 @@ const props = withDefaults(defineProps<Props>(), {
 })
 </script>
 
+
 <template>
-  <div class="w-full bg-gray-50 py-8">
+  <div class="w-full bg-gray-50">
     <!-- Header con información del clima -->
-    <div class="max-w-6xl mx-auto px-4 mb-8">
-      <div class="flex justify-between items-start">
-        <div class="flex-1">
-          <h2 class="text-2xl font-bold text-gray-800 mb-2">
+    <div class="w-full flex justify-center">
+      <div class="flex" style="width: 1455px;">
+        <!-- Div izquierdo - Descripción -->
+        <div class="bg-white flex items-center" style="flex: 1;">
+          <h2 class="text-4xl font-bold">
             {{ props.description }}
           </h2>
         </div>
         
-        <div class="text-right">
-          <h3 class="text-xl font-semibold text-gray-700 mb-2">{{ props.location }}</h3>
-          <div class="flex items-center justify-end space-x-4">
-            <div class="flex items-center">
-              <i class="pi pi-cloud text-2xl text-gray-600 mr-2"></i>
-              <span class="text-lg">Lluvia ligera</span>
-            </div>
-            <div class="text-3xl font-bold">{{ props.temperature }}°</div>
-            <div class="text-lg">
-              <span class="text-gray-600">Porcentaje humedad</span>
-              <div class="font-bold">{{ props.humidity }}%</div>
+        <!-- Div derecho - Clima -->
+        <div class="bg-white flex items-center justify-end" style="flex: 1; height: 355px;">
+          <div class="text-right">
+            <h3 class="text-2xl font-semibold text-gray-700 mb-2">{{ props.location }}</h3>
+            <div class="flex items-center justify-end space-x-6">
+              <div class="flex items-center">
+                <i class="pi pi-cloud text-4xl mr-3"></i>
+                <span class="text-2xl font-bold">Lluvia ligera</span>
+              </div>
+              <div class="text-5xl font-bold">{{ props.temperature }}°</div>
+              <div class="text-xl">
+                <span class="text-gray-600">Porcentaje humedad</span>
+                <div class="font-bold text-2xl">{{ props.humidity }}%</div>
+              </div>
             </div>
           </div>
         </div>
@@ -44,59 +55,48 @@ const props = withDefaults(defineProps<Props>(), {
     </div>
 
     <!-- Secciones coloridas -->
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex gap-0 rounded-lg overflow-hidden shadow-lg justify-center">
+    <div class="w-full flex justify-center">
+      <div class="flex gap-0 overflow-hidden shadow-lg" style="width: 1455px;">
         <!-- Atractivos -->
-        <div class="bg-green-500 text-white p-8 text-center relative flex flex-col justify-between" style="width: 290px; height: 455px;">
-          <h3 class="text-xl font-bold mb-4">Atractivos</h3>
+        <div class="text-white p-8 text-center relative flex flex-col justify-between" style="width: 291px; height: 455px; background-color: #3aa438;">
+          <h3 class="text-2xl font-bold mt-[60px]">Atractivos</h3>
           <div class="flex-1 flex items-center justify-center">
-            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-              <i class="pi pi-camera text-2xl"></i>
-            </div>
+            <img :src="imgAtractivos" alt="Atractivos" class="w-[160px] h-[198px] object-contain" />
           </div>
         </div>
 
         <!-- Festividades -->
-        <div class="bg-orange-500 text-white p-8 text-center relative flex flex-col justify-between" style="width: 290px; height: 455px;">
-          <h3 class="text-xl font-bold mb-4">Festividades</h3>
+        <div class="text-white p-8 text-center relative flex flex-col justify-between" style="width: 291px; height: 455px; background-color: #e64e23;">
+          <h3 class="text-2xl font-bold mt-[60px]">Festividades</h3>
           <div class="flex-1 flex items-center justify-center">
-            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-              <i class="pi pi-calendar text-2xl"></i>
-            </div>
+            <img :src="imgFestividades" alt="Festividades" class="w-[160px] h-[198px] object-contain" />
           </div>
         </div>
 
         <!-- Hoteles -->
-        <div class="bg-pink-500 text-white p-8 text-center relative flex flex-col justify-between" style="width: 290px; height: 455px;">
-          <h3 class="text-xl font-bold mb-4">Hoteles</h3>
+        <div class="text-white p-8 text-center relative flex flex-col justify-between" style="width: 291px; height: 455px; background-color: #e6007e;">
+          <h3 class="text-2xl font-bold mt-[60px]">Hoteles</h3>
           <div class="flex-1 flex items-center justify-center">
-            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-              <i class="pi pi-home text-2xl"></i>
-            </div>
+            <img :src="imgHoteles" alt="Hoteles" class="w-[160px] h-[198px] object-contain" />
           </div>
         </div>
 
         <!-- Restaurantes -->
-        <div class="bg-purple-600 text-white p-8 text-center relative flex flex-col justify-between" style="width: 290px; height: 455px;">
-          <h3 class="text-xl font-bold mb-4">Restaurantes</h3>
+        <div class="text-white p-8 text-center relative flex flex-col justify-between" style="width: 291px; height: 455px; background-color: #743b8d;">
+          <h3 class="text-2xl font-bold mt-[60px]">Restaurantes</h3>
           <div class="flex-1 flex items-center justify-center">
-            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-              <i class="pi pi-shopping-bag text-2xl"></i>
-            </div>
+            <img :src="imgRestaurantes" alt="Restaurantes" class="w-[160px] h-[198px] object-contain" />
           </div>
         </div>
 
         <!-- Tours -->
-        <div class="bg-cyan-500 text-white p-8 text-center relative flex flex-col justify-between" style="width: 290px; height: 455px;">
-          <h3 class="text-xl font-bold mb-4">Tours</h3>
+        <div class="text-white p-8 text-center relative flex flex-col justify-between" style="width: 291px; height: 455px; background-color: #00a4dd;">
+          <h3 class="text-2xl font-bold mt-[60px]">Tours</h3>
           <div class="flex-1 flex items-center justify-center">
-            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-              <i class="pi pi-map text-2xl"></i>
-            </div>
+            <img :src="imgTours" alt="Tours" class="w-[160px] h-[198px] object-contain" />
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-
