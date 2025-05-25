@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="max-w-7xl mx-auto px-4 py-8 pt-25">
         <!-- Título principal -->
         <h1 class="text-5xl font-bold mb-12">Vive su magia</h1>
 
@@ -50,11 +50,11 @@
             <!-- Columna derecha - Mapa con mejor manejo de imagen -->
             <div class="flex-1 lg:max-w-sm ml-4">
                 <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md ">
-                    <img 
-                        src="/src/assets/MapaCholula.png" 
+                    <img
+                        src="/src/assets/MapaCholula.png"
                         alt="Mapa de Cholula"
                         class="w-full h-96 object-cover
-" 
+"
                     />
                 </div>
             </div>
