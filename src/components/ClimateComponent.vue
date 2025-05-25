@@ -18,14 +18,13 @@ const props = withDefaults(defineProps<Props>(), {
 
 import { ref, onMounted } from 'vue'
 
-const temperature = ref<number | null>(props.temperature)
-const humidity = ref<number | null>(props.humidity)
-
+const temperature = ref<number>(18)
+const humidity = ref<number>(80)
 onMounted(async () => {
   try {
     const lat = 19.0622
     const lon = -98.3030
-    const apiKey = '4873fa38cdedacda892de447dd4e52b8'
+    const apiKey = '33e0d3a5b1b105ad07365c815845d68d'
 
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=es`
