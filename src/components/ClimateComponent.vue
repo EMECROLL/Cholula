@@ -7,18 +7,38 @@ import imgTours from '@/assets/images/imgTours.png'
 
 // Props opcionales para personalizar el componente
 interface Props {
-  temperature?: number
-  humidity?: number
   description?: string
   location?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  temperature: 18,
-  humidity: 80,
   description: '"La ciudad de los que huyeron donde está el cerro hecho a mano".',
   location: 'Clima actual'
 })
+
+import { ref, onMounted } from 'vue'
+
+const temperature = ref<number>(18)
+const humidity = ref<number>(80)
+onMounted(async () => {
+  try {
+    const lat = 19.0622
+    const lon = -98.3030
+    const apiKey = '33e0d3a5b1b105ad07365c815845d68d'
+
+    const response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=es`
+    )
+
+    const data = await response.json()
+
+    if (data.main?.temp != null) temperature.value = Math.round(data.main.temp)
+    if (data.main?.humidity != null) humidity.value = data.main.humidity
+  } catch (error) {
+    console.error('Error al obtener datos del clima:', error)
+  }
+})
+
 </script>
 
 
@@ -34,23 +54,28 @@ const props = withDefaults(defineProps<Props>(), {
           </h2>
         </div>
 
-        <!-- Div derecho - Clima -->
-        <div class="bg-white flex items-center justify-end" style="flex: 1; height: 355px;">
-          <div class="text-right">
-            <h3 class="text-2xl font-semibold text-gray-700 mb-2">{{ props.location }}</h3>
-            <div class="flex items-center justify-end space-x-6">
-              <div class="flex items-center">
-                <i class="pi pi-cloud text-4xl mr-3"></i>
-                <span class="text-2xl font-bold">Lluvia ligera</span>
-              </div>
-              <div class="text-5xl font-bold">{{ props.temperature }}°</div>
-              <div class="text-xl">
-                <span class="text-gray-600">Porcentaje humedad</span>
-                <div class="font-bold text-2xl">{{ props.humidity }}%</div>
-              </div>
-            </div>
-          </div>
+<!-- Div derecho - Clima -->
+<div class="bg-white flex items-center justify-end" style="flex: 1; height: 355px;">
+  <div class="text-right">
+    <h3 class="text-2xl font-semibold text-gray-700 mb-2">{{ props.location }}</h3>
+    <div class="flex items-center justify-end space-x-6">
+      <div class="flex items-center">
+        <i class="pi pi-cloud text-4xl mr-3"></i>
+        <span class="text-2xl font-bold">Lluvia ligera</span>
+      </div>
+      <div class="text-5xl font-bold">
+        {{ temperature !== null ? temperature + '°' : '...' }}
+      </div>
+      <div class="text-xl">
+        <span class="text-gray-600">Porcentaje humedad</span>
+        <div class="font-bold text-2xl">
+          {{ humidity !== null ? humidity + '%' : '...' }}
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
 
