@@ -12,7 +12,7 @@
           alt="Cafetería de Cholula"
           class="w-full h-70 object-cover rounded-xl"
         />
-        <p class="p-4">Cafeterías de Cholula<br />que tienen onda</p>
+        <p class="p-4 font-bold">Cafeterías de Cholula<br />que tienen onda</p>
       </div>
     </div>
 
@@ -24,7 +24,7 @@
           alt="Festival Volarte"
           class="w-full h-70 object-cover rounded-xl"
         />
-        <p class="p-4">Tierra de Gigantes<br />Festival "Volarte" 2024</p>
+        <p class="p-4 font-bold">Tierra de Gigantes<br />Festival "Volarte" 2024</p>
       </div>
     </div>
 
@@ -36,7 +36,7 @@
           alt="Volcán en Volarte"
           class="w-full h-70 object-cover rounded-xl"
         />
-        <p class="p-4">Tierra de Gigantes<br />Festival "Volarte" 2024</p>
+        <p class="p-4 font-bold">Tierra de Gigantes<br />Festival "Volarte" 2024</p>
       </div>
     </div>
   </section>
