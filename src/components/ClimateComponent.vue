@@ -33,7 +33,7 @@ const props = withDefaults(defineProps<Props>(), {
             {{ props.description }}
           </h2>
         </div>
-        
+
         <!-- Div derecho - Clima -->
         <div class="bg-white flex items-center justify-end" style="flex: 1; height: 355px;">
           <div class="text-right">
