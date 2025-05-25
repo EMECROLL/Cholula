@@ -53,7 +53,7 @@ onMounted(async () => {
             {{ props.description }}
           </h2>
         </div>
-        
+
 <!-- Div derecho - Clima -->
 <div class="bg-white flex items-center justify-end" style="flex: 1; height: 355px;">
   <div class="text-right">
@@ -61,7 +61,7 @@ onMounted(async () => {
     <div class="flex items-center justify-end space-x-6">
       <div class="flex items-center">
         <i class="pi pi-cloud text-4xl mr-3"></i>
-        <span class="text-2xl font-bold">Lluvia ligera</span> 
+        <span class="text-2xl font-bold">Lluvia ligera</span>
       </div>
       <div class="text-5xl font-bold">
         {{ temperature !== null ? temperature + '°' : '...' }}
